@@ -71,7 +71,9 @@ sudo apt install -y certbot python3-certbot-nginx
 sudo certbot --nginx -d admin.monirulshawn.com -d www.admin.monirulshawn.com
 sudo certbot --nginx -d shamim.monirulshawn.com -d www.shamim.monirulshawn.com
 sudo certbot --nginx -d lemaverick.com -d www.lemaverick.com
+sudo certbot --nginx -d monirulshawn.com -d www.monirulshawn.com
 
+mysql://mysql:Ty08XpTIDZJZlWrCk7YN3MRH8CIUlcGSM5llgm3utePqKS9GoesyED3VFL4Lld1n@148.113.44.6:3308/bebshadar_db
 
 https://monirulshawn.com
 
