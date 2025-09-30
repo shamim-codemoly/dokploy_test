@@ -1,8 +1,10 @@
 server {
-    listen 80;
-    server_name api.monirulshawn.com;
 
-    root /var/www/laravel-api/molyecom-api-backend/public;
+    listen 80;
+    server_name api.molyecom.com;
+
+    root /var/www/molyecom_pro_api/public;
+
 
     index index.php index.html;
 
@@ -23,8 +25,6 @@ server {
     location ~ /\.ht {
         deny all;
     }
+
+
 }
-
-
-
-@2909yOy$$

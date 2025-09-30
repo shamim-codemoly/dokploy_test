@@ -1,8 +1,10 @@
 server {
-    listen 80;
-    server_name api.monirulshawn.com;
 
-    root /var/www/laravel-api/molyecom-api-backend/public;
+    listen 80;
+    server_name bebshadar.codemoly.io;
+
+    root /var/www/bebshadar/public;
+
 
     index index.php index.html;
 
@@ -23,8 +25,6 @@ server {
     location ~ /\.ht {
         deny all;
     }
+
+
 }
-
-
-
-@2909yOy$$

@@ -4,9 +4,12 @@ sudo apt update && sudo apt upgrade -y
 
 sudo apt install -y nginx git curl build-essential
 
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+<!-- curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 
-sudo apt install -y nodejs
+sudo apt install -y nodejs -->
+
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 node -v
 npm -v
@@ -24,7 +27,7 @@ cd /var/www/monirulshawn
 
 pm2 start pnpm --name "store" -- start
 
-overwrite post=========================================
+overwrite port=========================================
 pm2 start pnpm --name "main-nextjs" -- start --env PORT=4000 
 pm2 start pnpm --name "admin" -- start --env PORT=4000 
 
@@ -45,7 +48,7 @@ need to update port in package.json file like this:
 
 
 cd /var/www/store
-PORT=3000 pm2 start "pnpm start" --name "next-store"
+PORT=3000 pm2 start "pnpm start" --name "store.molyecom.com"
 
 cd /var/www/admin
 PORT=3002 pm2 start "pnpm start" --name "lemaverick.com"
@@ -59,8 +62,7 @@ sudo vim /etc/nginx/sites-available/nextjs-app.conf
 
 load config file code ==========================================
 
-sudo ln -s /etc/nginx/sites-available/nextjs-app.conf /etc/nginx/sites-enabled/
-sudo ln -s /etc/nginx/sites-available/lemaverick.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/bebshadar /etc/nginx/sites-enabled/
 
 sudo nginx -t
 
@@ -68,20 +70,14 @@ sudo systemctl reload nginx
 
 sudo apt install -y certbot python3-certbot-nginx
 
-sudo certbot --nginx -d admin.monirulshawn.com -d www.admin.monirulshawn.com
-sudo certbot --nginx -d shamim.monirulshawn.com -d www.shamim.monirulshawn.com
-sudo certbot --nginx -d lemaverick.com -d www.lemaverick.com
-sudo certbot --nginx -d monirulshawn.com -d www.monirulshawn.com
-
-mysql://mysql:Ty08XpTIDZJZlWrCk7YN3MRH8CIUlcGSM5llgm3utePqKS9GoesyED3VFL4Lld1n@148.113.44.6:3308/bebshadar_db
-
-https://monirulshawn.com
+sudo certbot --nginx -d galbtoys.com -d www.galbtoys.com
 
 
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update
 
-sudo apt install -y php8.3 php8.3-fpm php8.3-mysql php8.3-mbstring php8.3-xml php8.3-bcmath php8.3-curl php8.3-gd php8.3-zip php8.3-unzip
+sudo apt install -y php8.3 php8.3-fpm php8.3-mysql php8.3-mbstring php8.3-xml php8.3-bcmath php8.3-curl php8.3-gd php8.3-zip unzip
+
 
 
 sudo apt install -y mysql-server
@@ -104,7 +100,7 @@ DB_PASSWORD=12345678
 
 
 sudo mkdir -p /var/www/laravel-api
-sudo chown -R $USER:$USER /var/www/laravel-api
+sudo chown -R $USER:$USER /var/www/molyecom_pro_store
 cd /var/www/laravel-api
 
 composer install
@@ -116,8 +112,8 @@ php artisan key:generate
 sudo chmod -R 775 storage
 sudo chmod -R 775 bootstrap/cache
 
-sudo chown -R www-data:www-data /var/www/laravel-api/molyecom-api-backend/storage
-sudo chown -R www-data:www-data /var/www/laravel-api/molyecom-api-backend/bootstrap/cache
+sudo chown -R www-data:www-data /var/www/bebshadar/storage
+sudo chown -R www-data:www-data /var/www/bebshadar/bootstrap/cache
 
 
 sudo vim /etc/nginx/sites-available/laravel-api.conf
