@@ -48,7 +48,7 @@ need to update port in package.json file like this:
 
 
 cd /var/www/store
-PORT=3000 pm2 start "pnpm start" --name "store.molyecom.com"
+PORT=3004 pm2 start "pnpm start" --name "fr.codemoly.com"
 
 cd /var/www/admin
 PORT=3002 pm2 start "pnpm start" --name "lemaverick.com"
@@ -62,7 +62,7 @@ sudo vim /etc/nginx/sites-available/nextjs-app.conf
 
 load config file code ==========================================
 
-sudo ln -s /etc/nginx/sites-available/bebshadar /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/admin.sutbmdc.com /etc/nginx/sites-enabled/
 
 sudo nginx -t
 
@@ -70,7 +70,9 @@ sudo systemctl reload nginx
 
 sudo apt install -y certbot python3-certbot-nginx
 
-sudo certbot --nginx -d galbtoys.com -d www.galbtoys.com
+sudo certbot --nginx -d admin.sutbmdc.com -d www.admin.sutbmdc.com
+
+
 
 
 sudo add-apt-repository ppa:ondrej/php -y
@@ -112,8 +114,8 @@ php artisan key:generate
 sudo chmod -R 775 storage
 sudo chmod -R 775 bootstrap/cache
 
-sudo chown -R www-data:www-data /var/www/bebshadar/storage
-sudo chown -R www-data:www-data /var/www/bebshadar/bootstrap/cache
+sudo chown -R www-data:www-data /var/www/sutbmdc_api/storage
+sudo chown -R www-data:www-data /var/www/sutbmdc_api/bootstrap/cache
 
 
 sudo vim /etc/nginx/sites-available/laravel-api.conf

@@ -1,9 +1,9 @@
 server {
 
     listen 80;
-    server_name api.sutbmdc.com;
+    server_name sohojponno.codemoly.io www.sohojponno.codemoly.io;
 
-    root /var/www/sutbmdc_api/public;
+    root /var/www/sohojponno_inventory/public;
 
 
     index index.php index.html;

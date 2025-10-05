@@ -16,6 +16,7 @@ FLUSH PRIVILEGES;
 CREATE DATABASE molyecom_pro;
 CREATE DATABASE bebshadar_pro;
 CREATE DATABASE shohojponno_db;
+CREATE DATABASE sutbmdc_db;
 
 -- Create user (only run once)
 CREATE USER 'codemoly'@'%' IDENTIFIED WITH mysql_native_password BY '@cOde$$2909';
@@ -24,6 +25,7 @@ CREATE USER 'codemoly'@'%' IDENTIFIED WITH mysql_native_password BY '@cOde$$2909
 GRANT ALL PRIVILEGES ON molyecom_pro.* TO 'codemoly'@'%';
 GRANT ALL PRIVILEGES ON bebshadar_pro.* TO 'codemoly'@'%';
 GRANT ALL PRIVILEGES ON shohojponno_db.* TO 'codemoly'@'%';
+GRANT ALL PRIVILEGES ON sutbmdc_db.* TO 'codemoly'@'%';
 
 -- Apply changes
 FLUSH PRIVILEGES;
