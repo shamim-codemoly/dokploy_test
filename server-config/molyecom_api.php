@@ -1,9 +1,9 @@
 server {
 
     listen 80;
-    server_name api.sutbmdc.com;
+    server_name dev.molyecom.com;
 
-    root /var/www/sutbmdc_api/public;
+    root /var/www/molyecom_dev_api/public;
 
 
     index index.php index.html;
