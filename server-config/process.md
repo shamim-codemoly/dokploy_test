@@ -16,7 +16,7 @@ npm -v
 
 
 sudo mkdir -p /var/www/monirulshawn
-sudo chown -R $USER:$USER /var/www/monirulshawn
+sudo chown -R $USER:$USER /var/www/molylearn_dev_api
 cd /var/www/monirulshawn
 npm install
 npm run build 
@@ -62,7 +62,7 @@ sudo vim /etc/nginx/sites-available/nextjs-app.conf
 
 load config file code ==========================================
 
-sudo ln -s /etc/nginx/sites-available/dev.molyecom.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/dev.molylearn.com /etc/nginx/sites-enabled/
 
 sudo nginx -t
 
@@ -70,8 +70,7 @@ sudo systemctl reload nginx
 
 sudo apt install -y certbot python3-certbot-nginx
 
-sudo certbot --nginx -d dev.molyecom.com -d www.admin.sutbmdc.com
-
+sudo certbot --nginx -d polliorganicsbd.com -d www.polliorganicsbd.com
 
 
 
@@ -102,7 +101,7 @@ DB_PASSWORD=12345678
 
 
 sudo mkdir -p /var/www/laravel-api
-sudo chown -R $USER:$USER /var/www/molyecom_pro_store
+sudo chown -R $USER:$USER /var/www/molylearn_dev_api
 cd /var/www/laravel-api
 
 composer install
@@ -114,8 +113,8 @@ php artisan key:generate
 sudo chmod -R 775 storage
 sudo chmod -R 775 bootstrap/cache
 
-sudo chown -R www-data:www-data /var/www/molyecom_dev_api/storage
-sudo chown -R www-data:www-data /var/www/molyecom_dev_api/bootstrap/cache
+sudo chown -R www-data:www-data /var/www/molylearn_dev_api/storage
+sudo chown -R www-data:www-data /var/www/molylearn_dev_api/bootstrap/cache
 
 
 sudo vim /etc/nginx/sites-available/laravel-api.conf

@@ -1,9 +1,9 @@
 server {
 
     listen 80;
-    server_name dev.molyecom.com;
+    server_name dev.molylearn.com;
 
-    root /var/www/molyecom_dev_api/public;
+    root /var/www/molylearn_dev_api/public;
 
 
     index index.php index.html;
