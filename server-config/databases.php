@@ -14,6 +14,10 @@ CREATE USER 'laravel1'@'%' IDENTIFIED BY 'StrongPass$$665!';
 GRANT ALL PRIVILEGES ON laravel1_db.* TO 'laravel1'@'%';
 FLUSH PRIVILEGES;
 
+Edit /etc/mysql/mysql.conf.d/mysqld.cnf and change:
+
+bind-address = 0.0.0.0
+
 ========================================
 -- Create databases
 CREATE DATABASE molyecom_pro;
