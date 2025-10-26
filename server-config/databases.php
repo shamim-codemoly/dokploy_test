@@ -26,7 +26,6 @@ CREATE DATABASE bebshadar_pro;
 CREATE DATABASE shohojponno_db;
 CREATE DATABASE sutbmdc_db;
 CREATE DATABASE laravel1_db;
-
 CREATE DATABASE molylean_dev_db;
 CREATE DATABASE molylean_pro_db;
 

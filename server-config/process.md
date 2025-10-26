@@ -70,9 +70,9 @@ sudo systemctl reload nginx
 
 sudo apt install -y certbot python3-certbot-nginx
 
-sudo certbot --nginx -d polliorganicsbd.com -d www.polliorganicsbd.com
+sudo certbot --nginx -d shasthomix.com -d www.shasthomix.com
 
-
+outfitpark.com.bd
 
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update
