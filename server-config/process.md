@@ -118,3 +118,13 @@ sudo chown -R www-data:www-data /var/www/molylearn_dev_api/bootstrap/cache
 
 
 sudo vim /etc/nginx/sites-available/laravel-api.conf
+
+
+ssh username@your_server_ip
+zip -r project_backup.zip your_folder_name/
+scp username@your_server_ip:/path/to/project_backup.zip /path/to/local/folder/
+scp root@192.168.1.10:/var/www/html/project_backup.zip ~/Downloads/
+
+
+
+scp -r ubuntu@51.79.250.126:/var/www/html/sutbmdc/lms_frontend.zip /home/dewan/Documents/codemoly/lms_backup_vps
